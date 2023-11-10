@@ -27,3 +27,8 @@ npm run dev
 ```sh
 npm run build
 ```
+<html>
+  <body>
+    <img src="https://ibb.co/1mTcq6H" />
+  </body>
+</html>
