@@ -29,6 +29,6 @@ npm run build
 ```
 <html>
   <body>
-    <img src="https://i.ibb.co/W2fCytS/Screenshot-2023-11-10-090730.png"  width = "1000px" height="800px"/>
+    <img src="https://i.ibb.co/W2fCytS/Screenshot-2023-11-10-090730.png"  width = "1000px" height="1000px" style="object-fit: cover"/>
   </body>
 </html>
