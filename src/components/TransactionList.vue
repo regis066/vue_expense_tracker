@@ -4,15 +4,25 @@
         <li v-for="transaction in transactions"
         :key="transaction.id"
         :class="transaction.amount < 0 ? 'minus' : 'plus'">
-            {{ transaction.text }}
-            <button class="delete-btn">X</button>
+            {{ transaction.text }} <span>{{ transaction.amount }}</span>
+            <button @click="deleteTransaction" class="delete-btn">X</button>
         </li>
     </ul>
 </template>
 <script setup>
-    const transactions = [
-        { id: 1 , text: 'Flower', amount: -19.99},
-        { id: 2 , text: 'Salary', amount: 299.97},
-    ]
+import { defineProps } from 'vue';
+import { defineEmits } from 'vue';
 
+const emit = defineEmits(['transactionDeleted'])
+const props = defineProps({
+    transactions: {
+        type: Array,
+        required: true,
+
+    }
+});
+
+const deleteTransaction = (id) => {
+    emit('transactionDeleted' , id);
+}
 </script>
